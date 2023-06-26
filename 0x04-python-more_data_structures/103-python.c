@@ -25,14 +25,7 @@ void print_python_bytes(PyObject *p)
 	printf("  size: %ld\n", size);
 	printf("  trying string: %s\n", string);
 
-	if  Python list info\n");
-	printf("[*] Size of the Python List = %ld\n", size);
-	printf("[*] Allocated = %ld\n", list->allocated);
-
-	for (i = 0; i < size; i++)
-	{
-		obj = ((PyListObject *)p)->ob_item[i];
-		printf("Element %ld: %s\n", i, ((obj)->ob_type)->tp_n(size >= 10)
+	if (size >= 10)
 		limit = 10;
 	else
 		limit = size + 1;
@@ -63,7 +56,7 @@ void print_python_list(PyObject *p)
 	size = ((PyVarObject *)(p))->ob_size;
 	list = (PyListObject *)p;
 
-		printf("[*] Python list info\n");
+	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", list->allocated);
 
