@@ -5,9 +5,15 @@
 class Square:
     """Represent a square."""
 
-    def __init__(self, size=0):
-        """Initialize a new Square. """
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new square.
+
+        Args:
+            size (int): The size of the new square.
+            position (int, int): The position of the new square.
+        """
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -24,8 +30,8 @@ class Square:
 
     @property
     def position(self):
-        """Get/set the postion of the square."""
-        return (self.__size)
+        """Get/set the current position of the square."""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
@@ -41,7 +47,7 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        """prints in stdout the square with the character #"""
+        """Print the square with the # character."""
         if self.__size == 0:
             print("")
             return
