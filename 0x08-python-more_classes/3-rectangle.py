@@ -6,14 +6,13 @@ class Rectangle:
     """Represent a Rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle. """
-
+        """Initialize a new Rectangle."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the current width of the Rectangle. """
+        """Get/set the current width of the Rectangle."""
         return (self.__width)
 
     @width.setter
@@ -26,7 +25,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the current height of the Rectangle. """
+        """Get/set the current height of the Rectangle."""
         return (self.__height)
 
     @height.setter
@@ -38,17 +37,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """returns the rectangle area."""
+        """Return the rectangle area."""
         return (self.__height * self.__width)
 
     def perimeter(self):
-        """returns the rectangle perimeter."""
+        """Return the rectangle perimeter."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((2 * self.__height) + (2 * self.__width))
 
     def __str__(self):
-        """ Return the printable representation of the Rectangle.
+        """Return the printable representation of the Rectangle.
 
         Represents the rectangle with the # character.
         """
